@@ -23,8 +23,18 @@ fun main(args: Array<String>) {
     for (index in languageArray.indices) {
         println("[${index}]" + languageArray[index])
     }
+
+    var b = null
+
+    println(b?:"empty")
+
+    println("ABC".hello())
 }
 
 fun sum(a: Int, b: Int) :Int {
     return a + b;
+}
+
+fun String.hello():String {
+    return "Hello!"
 }
