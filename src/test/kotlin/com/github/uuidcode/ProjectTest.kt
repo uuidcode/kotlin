@@ -25,6 +25,11 @@ class ProjectTest {
         project.stageList = stageList
 
         println(project)
+
+        var p: Project? = Project()
+        p = null
+        println(p?.person?.name)
+        println(p?.person?.name)
     }
 
 }
