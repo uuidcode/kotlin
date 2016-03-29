@@ -1,4 +1,4 @@
-package com.github.uuidcode.kotlin
+package main.kotlin
 
 import java.util.Random as JavaRandom
 
@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
     println(a)
     println(numberString)
     println("10".toLong())
-    println(com.github.uuidcode.kotlin.sum(10, 20))
+    println(main.kotlin.sum(10, 20))
     println(JavaRandom().nextInt())
 
     var languageArray: Array<String> = arrayOf("Java", "Javascript", "Kotlin")

@@ -1,4 +1,4 @@
-package com.github.uuidcode.kotlin.java;
+package com.github.uuidcode;
 
 public class User {
     private final String name;

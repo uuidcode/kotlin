@@ -1,4 +1,4 @@
-package com.github.uuidcode.kotlin
+package com.github.uuidecode
 
 data class User(val name: String = "", val age: Int = 0) {
     var phone: String = ""

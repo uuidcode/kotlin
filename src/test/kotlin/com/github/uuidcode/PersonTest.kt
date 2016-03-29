@@ -1,5 +1,6 @@
-package com.github.uuidcode.kotlin
+package com.github.uuidcode
 
+import com.github.uuidecode.Person
 import org.junit.Test
 
 class PersonTest {
