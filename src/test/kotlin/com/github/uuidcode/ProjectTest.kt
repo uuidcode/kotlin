@@ -41,6 +41,14 @@ class ProjectTest {
         Project.index++
         assertThat(Project.create(), `is`("OK"))
         assertThat(Project.index, `is`(2))
+
+        with(project) {
+            projectId = 1
+        }
+
+        project.apply {
+            projectId = 1
+        }
     }
 
 }
