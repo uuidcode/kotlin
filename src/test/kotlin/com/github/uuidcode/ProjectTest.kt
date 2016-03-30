@@ -3,6 +3,9 @@ package com.github.uuidcode
 import com.github.uuidecode.Node
 import com.github.uuidecode.Project
 import com.github.uuidecode.Stage
+import org.hamcrest.CoreMatchers.nullValue
+import org.hamcrest.core.Is.`is`
+import org.junit.Assert.assertThat
 import org.junit.Test
 
 class ProjectTest {
@@ -24,12 +27,20 @@ class ProjectTest {
         var project = Project()
         project.stageList = stageList
 
-        println(project)
+        var cloneProject = project.copy()
+
+        assertThat(project?.stageList?.size, `is`(1))
+        assertThat(cloneProject?.stageList?.size, `is`(1))
+
 
         var p: Project? = Project()
         p = null
-        println(p?.person?.name)
-        println(p?.person?.name)
+        assertThat(p?.person?.name, `is`(nullValue()))
+
+
+        Project.index++
+        assertThat(Project.create(), `is`("OK"))
+        assertThat(Project.index, `is`(2))
     }
 
 }
