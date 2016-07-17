@@ -27,9 +27,23 @@ class ProjectTest {
         println(project)
 
         var p: Project? = Project()
+        println(p?.person?.name)
         p = null
         println(p?.person?.name)
-        println(p?.person?.name)
+    }
+
+    @Test
+    fun htmlTest() {
+        var project = Project(name = "test", projectId = 1000L)
+
+        var html =
+        """
+            <div id="${project.projectId}">
+                ${project.name}
+            </div>
+        """
+
+        println(html)
     }
 
 }
