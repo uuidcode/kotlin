@@ -10,9 +10,8 @@ class StdLibTest {
     fun test() {
         var project = Project()
         project.apply {
-            stageList = arrayListOf(
-                Stage(stageId = 3)
-            )
+            this.stageList = arrayListOf(Stage(stageId = 3))
+            this.name = "test"
         }
 
         var stage = project.let {
